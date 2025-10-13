@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Cá Nhân Sinh Viên | Hệ Thống Học Phần</title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #3f9ce3;
+            --secondary-bg: #f5f7fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--secondary-bg);
+            min-height: 100vh;
+        }
+
+        .header-nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .main-content {
+            max-width: 1200px;
+        }
+
+        .tab-item {
+            cursor: pointer;
+            padding: 10px 15px;
+            border-bottom: 3px solid transparent;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.2s;
+        }
+
+            .tab-item.active {
+                border-bottom: 3px solid var(--primary-blue);
+                color: var(--primary-blue);
+                font-weight: 600;
+            }
+
+        .data-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 20px;
+        }
+
+        .data-field {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+            .data-field:last-child {
+                border-bottom: none;
+            }
+
+        .data-label {
+            font-weight: 500;
+            color: #555;
+            width: 40%;
+        }
+
+        .data-value {
+            font-weight: 600;
+            color: #333;
+            width: 60%;
+            text-align: right;
+        }
+
+        /* Modal styling */
+        .modal {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 12px;
+        }
+    </style>
+
+    <script>
+        // --- CÁC HÀM XỬ LÝ GIAO DIỆN PHẢI LÀ GLOBAL ---
+
+        window.showSystemError = function (title, message) {
+            document.getElementById('errorModalTitle').textContent = title;
+            document.getElementById('errorModalMessage').textContent = message;
+            document.getElementById('errorModal').classList.remove('hidden');
+        }
+
+        window.closeModal = function () {
+            document.getElementById('errorModal').classList.add('hidden');
+        }
+
+        window.changeTab = function (tabName) {
+            const tabs = ['info', 'register', 'result'];
+            tabs.forEach(tab => {
+                document.getElementById(`${tab}Tab`).classList.toggle('active', tab === tabName);
+                document.getElementById(`${tab}Content`).classList.toggle('hidden', tab !== tabName);
+            });
+        }
+    </script>
+
+    <!-- Tải các thư viện Firebase và Logic chính (module) -->
+    <script type="module">
+        // Import các hàm Firebase cần thiết
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, query, where, getDocs, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // --- 1. KHAI BÁO BIẾN TOÀN CỤC VÀ HẰNG SỐ (SỬ DỤNG GIÁ TRỊ MẶC ĐỊNH CHO COMPILATION) ---
+
+        const DEFAULT_FIREBASE_CONFIG = {
+            apiKey: "AIzaSyC-placeholder-firebase-key",
+            authDomain: "placeholder.firebaseapp.com",
+            projectId: "default-project-id"
+        };
+
+        let firebaseConfig = DEFAULT_FIREBASE_CONFIG;
+        try {
+            if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+                // Sửa lỗi: Cố gắng parse, nếu lỗi thì dùng mặc định
+                firebaseConfig = JSON.parse(__firebase_config);
+            }
+        } catch (e) {
+            console.error("Lỗi parse __firebase_config, sử dụng cấu hình mặc định.", e);
+        }
+
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+
+        let app, db, auth, currentUserId;
+
+        // Bật log debug cho Firestore (Giúp debug lỗi kết nối)
+        setLogLevel('Debug');
+
+
+        // --- 2. HÀM XỬ LÝ DỮ LIỆU GIẢ VÀ UI ---
+
+        /**
+         * Tạo dữ liệu sinh viên giả nếu không thể tải từ DB
+         * @param {string} userId - Firebase UID
+         */
+        function generateMockStudentData(userId) {
+            const hash = userId ? userId.substring(0, 8) : '00000000';
+            return {
+                StudentId: `SV${hash.toUpperCase()}`,
+                FullName: "Sinh Viên Thí Nghiệm",
+                Gender: "Nam/Nữ",
+                DateOfBirth: "2000-01-01",
+                CourseYear: "K2024",
+                ClassName: "CNTT-K24",
+                FirebaseId: userId,
+                isMock: true
+            };
+        }
+
+        /**
+         * Hàm cập nhật giao diện thông tin sinh viên.
+         * @param {Object} data - Dữ liệu sinh viên để hiển thị.
+         */
+        function updateStudentUI(data) {
+            let dobDisplay = data.DateOfBirth || 'N/A';
+            if (/\d{4}-\d{2}-\d{2}/.test(data.DateOfBirth)) {
+                try {
+                    dobDisplay = new Date(data.DateOfBirth).toLocaleDateString('vi-VN');
+                } catch (e) {
+                    // Bỏ qua nếu không parse được
+                }
+            }
+
+            document.getElementById('ms_sinh_vien').textContent = data.StudentId || 'Chưa cập nhật';
+            document.getElementById('ho_va_ten').textContent = data.FullName || 'Sinh viên';
+            document.getElementById('gioi_tinh').textContent = data.Gender || 'N/A';
+            document.getElementById('ngay_sinh').textContent = dobDisplay;
+            document.getElementById('khoa_hoc').textContent = data.CourseYear || 'N/A';
+            document.getElementById('lop_hanh_chinh').textContent = data.ClassName || 'N/A';
+            document.getElementById('user_id_firebase').textContent = data.FirebaseId || 'N/A';
+            document.getElementById('welcomeMessage').textContent = `Xin chào, ${data.FullName || (data.FirebaseId ? data.FirebaseId.substring(0, 10) + '...' : 'Khách')}`;
+        }
+
+        window.handleLogout = async function () {
+            if (auth) {
+                try {
+                    await signOut(auth);
+                } catch (error) {
+                    console.error("Lỗi đăng xuất:", error);
+                }
+            }
+            window.location.href = 'index.html';
+        }
+
+        // --- 3. XỬ LÝ FIREBASE VÀ DỮ LIỆU (QUAN TRỌNG NHẤT) ---
+
+        function getStudentCollectionPath() {
+            // Path chuẩn: /artifacts/{appId}/public/data/students
+            return `artifacts/${appId}/public/data/students`;
+        }
+
+        /**
+         * Tải dữ liệu sinh viên từ Firestore dựa trên Firebase UID.
+         * @param {string} userId - Firebase UID của người dùng đã đăng nhập.
+         */
+        async function loadStudentData(userId) {
+            // Nếu không có userId (chưa đăng nhập), dùng dữ liệu giả
+            if (!userId) {
+                updateStudentUI(generateMockStudentData("Chưa xác thực"));
+                return;
+            }
+
+            updateStudentUI({
+                StudentId: 'Đang tải...', FullName: 'Đang tải...', Gender: 'Đang tải...',
+                DateOfBirth: 'Đang tải...', CourseYear: 'Đang tải...', ClassName: 'Đang tải...',
+                FirebaseId: userId
+            });
+
+            // Nếu DB chưa được khởi tạo thành công (do lỗi config), dùng dữ liệu giả
+            if (!db) {
+                const mockData = generateMockStudentData(userId);
+                mockData.FullName = `[LỖI DB] ${mockData.FullName}`;
+                updateStudentUI(mockData);
+                console.error("Firestore chưa được khởi tạo. Hiển thị dữ liệu giả.");
+                return;
+            }
+
+            const studentCollectionRef = collection(db, getStudentCollectionPath());
+
+            try {
+                // Truy vấn: tìm document có trường 'userId' == userId hiện tại
+                const q = query(studentCollectionRef, where("userId", "==", userId));
+                const querySnapshot = await getDocs(q);
+
+                if (querySnapshot.empty) {
+                    console.warn(`Không tìm thấy dữ liệu sinh viên cho UID: ${userId}. Hiển thị dữ liệu giả.`);
+                    // Nếu không tìm thấy trong DB, dùng dữ liệu giả
+                    updateStudentUI(generateMockStudentData(userId));
+                    window.showSystemError("Thiếu dữ liệu", `Không tìm thấy thông tin sinh viên (${userId}) trong DB. Vui lòng đảm bảo đã đăng ký.`);
+                    return;
+                }
+
+                const studentDoc = querySnapshot.docs[0];
+                const studentData = studentDoc.data();
+
+                updateStudentUI({
+                    StudentId: studentData.StudentId,
+                    FullName: studentData.FullName,
+                    Gender: studentData.Gender,
+                    DateOfBirth: studentData.DateOfBirth,
+                    CourseYear: studentData.CourseYear,
+                    ClassName: studentData.ClassName,
+                    FirebaseId: userId
+                });
+                console.log("Đã tải dữ liệu sinh viên thành công:", studentData);
+
+            } catch (error) {
+                console.error("Lỗi tải dữ liệu sinh viên từ Firestore (kết nối ok, nhưng truy vấn lỗi):", error);
+                // Nếu truy vấn lỗi, dùng dữ liệu giả
+                updateStudentUI(generateMockStudentData(userId));
+                window.showSystemError("Lỗi Dữ liệu", "Không thể tải thông tin sinh viên. Vui lòng kiểm tra console.");
+            }
+        }
+
+        // Hàm khởi tạo Firebase
+        async function initializeFirebase() {
+            // --- BƯỚC 1: XÁC THỰC CẤU HÌNH ---
+            if (!firebaseConfig.projectId || firebaseConfig.projectId === "default-project-id") {
+                const errMsg = "LỖI CRITICAL: Cấu hình Firebase không hợp lệ. Đang dùng Đăng nhập Ẩn danh và Dữ liệu giả.";
+                console.error(errMsg);
+                window.showSystemError("Lỗi Khởi Tạo (Critical)", errMsg);
+
+                // Vẫn cố gắng đăng nhập ẩn danh để có UID
+                try {
+                    app = initializeApp(DEFAULT_FIREBASE_CONFIG);
+                    auth = getAuth(app);
+                    await signInAnonymously(auth);
+                } catch (e) {
+                    console.error("Lỗi đăng nhập ẩn danh:", e);
+                    loadStudentData(null); // Không có UID, dùng mock data cơ bản
+                }
+                return;
+            }
+
+            // --- BƯỚC 2: KHỞI TẠO CHÍNH THỨC VÀ ĐĂNG NHẬP ---
+            try {
+                app = initializeApp(firebaseConfig);
+                auth = getAuth(app);
+                db = getFirestore(app);
+
+                // Lắng nghe trạng thái xác thực
+                onAuthStateChanged(auth, (user) => {
+                    const id = user ? user.uid : null;
+                    console.log(user ? "Đã xác thực thành công. UID: " + id : "Đã đăng xuất.");
+                    loadStudentData(id);
+                });
+
+                // Thực hiện đăng nhập ban đầu
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    // Nếu token bị thiếu, chuyển sang đăng nhập ẩn danh (AN TOÀN HƠN)
+                    console.warn("Không tìm thấy __initial_auth_token. Đang đăng nhập ẩn danh...");
+                    await signInAnonymously(auth);
+                }
+
+            } catch (error) {
+                console.error("Lỗi Khởi tạo Firebase CHÍNH THỨC:", error);
+                window.showSystemError("Lỗi Khởi Tạo", "Không thể khởi tạo dịch vụ Firebase chính thức. Đang chuyển sang Dữ liệu giả. Vui lòng kiểm tra console.");
+                loadStudentData(null); // Lỗi nặng, dùng mock data cơ bản
+            }
+        }
+
+        // Khởi động Firebase khi DOM đã sẵn sàng
+        window.onload = initializeFirebase;
+    </script>
+</head>
+<body class="p-4 sm:p-6">
+    <!-- Header/Navigation Bar -->
+    <header class="header-nav fixed top-0 left-0 right-0 z-10">
+        <div class="main-content mx-auto flex justify-between items-center px-4 sm:px-6 py-3">
+            <div class="text-xl font-extrabold text-gray-800">
+                <span class="text-2xl text-[var(--primary-blue)] font-bold">HỆ THỐNG</span>
+                <span class="text-xl font-medium text-gray-700"> HỌC PHẦN</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span id="welcomeMessage" class="text-gray-600 font-medium">Xin chào, Đang tải...</span>
+                <button onclick="handleLogout()" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-200">
+                    Đăng Xuất
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="main-content mx-auto mt-20 pt-4">
+        <h1 class="text-3xl font-extrabold mb-6 text-gray-800">Trang Cá Nhân Sinh Viên</h1>
+
+        <!-- Tab Navigation -->
+        <div class="flex border-b border-gray-200 mb-6 bg-white rounded-t-xl shadow-sm">
+            <div id="infoTab" class="tab-item active" onclick="changeTab('info')">Thông tin Cá nhân</div>
+            <div id="registerTab" class="tab-item" onclick="changeTab('register')">Đăng ký Học phần</div>
+            <div id="resultTab" class="tab-item" onclick="changeTab('result')">Kết quả Đăng ký</div>
+        </div>
+
+        <!-- Tab Content: Thông tin Cá nhân -->
+        <div id="infoContent" class="p-6 data-card">
+            <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Thông tin Cơ bản</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
+
+                <div class="data-field">
+                    <span class="data-label">Mã số Sinh viên (MSSV):</span>
+                    <span id="ms_sinh_vien" class="data-value">Đang tải...</span>
+                </div>
+                <div class="data-field">
+                    <span class="data-label">Họ và Tên:</span>
+                    <span id="ho_va_ten" class="data-value">Đang tải...</span>
+                </div>
+
+                <div class="data-field">
+                    <span class="data-label">Giới tính:</span>
+                    <span id="gioi_tinh" class="data-value">Đang tải...</span>
+                </div>
+                <div class="data-field">
+                    <span class="data-label">Ngày sinh:</span>
+                    <span id="ngay_sinh" class="data-value">Đang tải...</span>
+                </div>
+
+                <div class="data-field">
+                    <span class="data-label">Khóa học:</span>
+                    <span id="khoa_hoc" class="data-value">Đang tải...</span>
+                </div>
+                <div class="data-field">
+                    <span class="data-label">Lớp hành chính:</span>
+                    <span id="lop_hanh_chinh" class="data-value">Đang tải...</span>
+                </div>
+
+                <div class="data-field sm:col-span-2 border-t mt-4 pt-4">
+                    <span class="data-label">User ID (Firebase):</span>
+                    <span id="user_id_firebase" class="data-value text-sm">Đang tải...</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tab Content: Đăng ký Học phần (Hidden by default) -->
+        <div id="registerContent" class="p-6 data-card hidden">
+            <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Đăng ký Học phần</h2>
+            <p class="text-gray-600">Nội dung chức năng Đăng ký học phần sẽ được thêm vào đây.</p>
+        </div>
+
+        <!-- Tab Content: Kết quả Đăng ký (Hidden by default) -->
+        <div id="resultContent" class="p-6 data-card hidden">
+            <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Kết quả Đăng ký</h2>
+            <p class="text-gray-600">Nội dung chức năng Kết quả đăng ký sẽ được thêm vào đây.</p>
+        </div>
+    </div>
+
+    <!-- Global Error Modal -->
+    <div id="errorModal" class="modal fixed inset-0 flex items-center justify-center hidden z-50">
+        <div class="modal-content bg-white shadow-2xl transform transition-all">
+            <!-- Dòng này là DÒNG 247 trên file gốc trước, tui đã chuyển sang DÒNG 261 -->
+            <h3 id="errorModalTitle" class="text-xl font-bold text-red-600 mb-4 text-center">Lỗi Hệ thống</h3>
+            <p id="errorModalMessage" class="text-gray-700 mb-6 text-center">Không thể kết nối với hệ thống dữ liệu. Vui lòng thử lại sau.</p>
+            <button onclick="closeModal()" class="w-full py-2 bg-[var(--primary-blue)] text-white font-semibold rounded-lg hover:bg-[#3486c4] transition duration-200">
+                Đã hiểu
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+﻿/* wwwroot/css/login.css (ĐÃ CẬP NHẬT) */
+
+:root {
+    --primary-blue: #3f9ce3;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: League Spartan, sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* 🎯 ÁP DỤNG HÌNH NỀN SÓNG CHO TOÀN BỘ BODY */
+    background-image: url('../Image/background_login.jpg');
+    background-size: cover;
+    background-position: center;
+    /*background-color: var(--primary-blue);*/ /* Màu nền dự phòng */
+}
+
+/* Container cho toàn bộ nội dung (Tựa đề + Form) */
+.login-container {
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    color: #0d47a1; /* Màu chữ xanh đậm cho tiêu đề */
+    padding: 20px;
+}
+
+/* Khối Tựa đề (Hệ thống học phần) */
+.header-panel {
+    margin-bottom: 30px;
+    color: #0d47a1; /* Đặt màu chữ chính xác theo ảnh */
+}
+
+    .header-panel img {
+        width: 180px;
+/*        margin-bottom: 10px;*/
+    }
+
+.header-panel h1 {
+    font-size: 2.2em;
+    margin: 0 0 5px 0;
+}
+
+.header-panel h2 {
+    font-size: 1em;
+    font-weight: 250;
+    color: #0d47a1;
+    }
+
+/* Khối Form (Nền trắng theo thiết kế) */
+.form-panel {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: left;
+}
+
+/* Giữ nguyên các phần còn lại của form-panel (input, button, footer) */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #0d47a1;
+    font-size: 0.9em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #38b6ff;
+    box-shadow: 0 4px 15px rgba(56, 182, 255, 0.15);
+}
+
+.form-panel button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-blue);
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid #3486c4;
+    transition: background-color 0.3s;
+}
+
+    .form-panel button:hover {
+        background-color: #3486c4;
+    }
+
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+    .form-footer a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+.response-message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+}
+h1 {
+    font-family: Anton, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+h2 {
+    font-family: League Spartan, sans-serif;
+    font-weight: 200;
+    letter-spacing: 6px;
+    font-weight:100;  
+}
+/* Modal nền mờ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hộp nội dung modal */
+.modal-content {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+    .modal-content h3 {
+        margin-top: 0;
+        color: #0d47a1;
+    }
+
+    .modal-content input {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #38b6ff;
+        box-shadow: 0 4px 15px rgba(56, 182, 255, 0.15);
+    }
+
+    .modal-content button {
+        margin-top: 15px;
+        width: 100%;
+        background-color: var(--primary-blue);
+        color: #fff;
+        font-weight: 600;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .modal-content button:hover {
+            background-color: #3486c4;
+        }
+
+.close-modal {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}

@@ -1,0 +1,15 @@
+# Build
+bin/
+obj/
+
+# VS
+*.user
+*.vs/
+.vscode/
+
+# Secrets
+appsettings.Development.json
+*.db
+
+# Optional: log, temp
+*.log

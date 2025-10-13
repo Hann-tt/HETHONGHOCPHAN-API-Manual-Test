@@ -1,0 +1,11 @@
+@HETHONGHOCPHAN_HostAddress = http://localhost:5257
+
+GET {{HETHONGHOCPHAN_HostAddress}}/index.html/
+Accept: application/json
+
+###
+
+GET {{HETHONGHOCPHAN_HostAddress}}/index.html/1
+Accept: application/json
+
+###

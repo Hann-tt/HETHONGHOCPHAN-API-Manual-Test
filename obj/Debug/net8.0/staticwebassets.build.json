@@ -1,0 +1,1464 @@
+{
+  "Version": 1,
+  "Hash": "oSBe2NveBP4jf9zoSz80drzV/o1q9uA5SCutLHlq8lI=",
+  "Source": "HETHONGHOCPHAN",
+  "BasePath": "_content/HETHONGHOCPHAN",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HETHONGHOCPHAN\\wwwroot",
+      "Source": "HETHONGHOCPHAN",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\css\\login.css",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "css/login#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oerahl8aig",
+      "Integrity": "wDGs0R+WeiTtZ5c7h2EkTushOmAlpVUNVqVTqJOjuWU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\css\\register.css",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "css/register#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "658o4k556u",
+      "Integrity": "xtxiaVw7DCbQgH7d50Qk8raK8rp+OldfVpQUfkea3X4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\register.css"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\ForgotPassword.html",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "ForgotPassword#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4xk23f85gu",
+      "Integrity": "aBVWd2Catedi/REfn2CHPKkZO3BapX7u8vB5ggiy4s4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ForgotPassword.html"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\home.html",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "home#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c0x2m55qpy",
+      "Integrity": "nO35HkxhdYhRbD29ebeOYwGeohMYbMSPR5quMvuq0yk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\home.html"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\background_login.jpg",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "Image/background_login#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "njn69czty1",
+      "Integrity": "s4UNhQfm9TJryxjSUJvkhhrROYibnEWmGQZ5o1IAl9A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\background_login.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\background_signup.jpg",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "Image/background_signup#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ilhz35ea37",
+      "Integrity": "KkUk/QBOZof5l2cIvDHKwUO5bdVci3JLcnBTJH/KpIs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\background_signup.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\Login.jpg",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "Image/Login#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p2un0i8m6o",
+      "Integrity": "AYDY8vn/p9gecUJZvxyMv4zutDLgBPk3itAH9tSED9g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Login.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\logo-edu.png",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "Image/logo-edu#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wf775kcpsj",
+      "Integrity": "lOmEUt5Nm9fxEf5sOPtP/jDZ4u6MTyla+M0MYXZzTwE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\logo-edu.png"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\sign up.jpg",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "Image/sign up#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7fvn4zutda",
+      "Integrity": "0w7C9/a9ZsUUzA9E/cUA9ze8ngKEaRpiNCbHajm8NkQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\sign up.jpg"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\index.html",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "krpdtat7ql",
+      "Integrity": "sPiRosgf3iULzQQXJGjakPQHX1bOBhaAMNuyVfaRc80=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\js\\login.js",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "js/login#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ugtznenc9d",
+      "Integrity": "EqFhgIXBA3LJ8Q4VMcp/WLR0upDkxhr1+xXmQsP7cbM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\login.js"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\js\\register.js",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "js/register#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vnm82bujwm",
+      "Integrity": "Re0GBtfWUwGfT0+yYz2oQ13YSXEMMDihmx8dDjgtK1c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\register.js"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\login.html",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "login#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g4qy4fjoir",
+      "Integrity": "wAgh0p7L3Nt1UHPsR2l4jYPpDl2bTVoMd+4QvtIsGcg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\login.html"
+    },
+    {
+      "Identity": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\reset-password.html",
+      "SourceId": "HETHONGHOCPHAN",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\",
+      "BasePath": "_content/HETHONGHOCPHAN",
+      "RelativePath": "reset-password#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p9xodc3ves",
+      "Integrity": "bYvDqh6qL3oMxPaBo/4F98vB1kh724v9a4r5M+p+DsA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\reset-password.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/login.css",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4311"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wDGs0R+WeiTtZ5c7h2EkTushOmAlpVUNVqVTqJOjuWU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 08:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wDGs0R+WeiTtZ5c7h2EkTushOmAlpVUNVqVTqJOjuWU="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.oerahl8aig.css",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4311"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wDGs0R+WeiTtZ5c7h2EkTushOmAlpVUNVqVTqJOjuWU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 08:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oerahl8aig"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wDGs0R+WeiTtZ5c7h2EkTushOmAlpVUNVqVTqJOjuWU="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.658o4k556u.css",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xtxiaVw7DCbQgH7d50Qk8raK8rp+OldfVpQUfkea3X4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Oct 2025 14:22:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "658o4k556u"
+        },
+        {
+          "Name": "label",
+          "Value": "css/register.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xtxiaVw7DCbQgH7d50Qk8raK8rp+OldfVpQUfkea3X4="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.css",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xtxiaVw7DCbQgH7d50Qk8raK8rp+OldfVpQUfkea3X4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Oct 2025 14:22:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xtxiaVw7DCbQgH7d50Qk8raK8rp+OldfVpQUfkea3X4="
+        }
+      ]
+    },
+    {
+      "Route": "ForgotPassword.4xk23f85gu.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\ForgotPassword.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aBVWd2Catedi/REfn2CHPKkZO3BapX7u8vB5ggiy4s4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 13:23:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4xk23f85gu"
+        },
+        {
+          "Name": "label",
+          "Value": "ForgotPassword.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aBVWd2Catedi/REfn2CHPKkZO3BapX7u8vB5ggiy4s4="
+        }
+      ]
+    },
+    {
+      "Route": "ForgotPassword.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\ForgotPassword.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aBVWd2Catedi/REfn2CHPKkZO3BapX7u8vB5ggiy4s4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 13:23:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aBVWd2Catedi/REfn2CHPKkZO3BapX7u8vB5ggiy4s4="
+        }
+      ]
+    },
+    {
+      "Route": "home.c0x2m55qpy.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\home.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18691"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nO35HkxhdYhRbD29ebeOYwGeohMYbMSPR5quMvuq0yk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 13:55:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c0x2m55qpy"
+        },
+        {
+          "Name": "label",
+          "Value": "home.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nO35HkxhdYhRbD29ebeOYwGeohMYbMSPR5quMvuq0yk="
+        }
+      ]
+    },
+    {
+      "Route": "home.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\home.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18691"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nO35HkxhdYhRbD29ebeOYwGeohMYbMSPR5quMvuq0yk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 13:55:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nO35HkxhdYhRbD29ebeOYwGeohMYbMSPR5quMvuq0yk="
+        }
+      ]
+    },
+    {
+      "Route": "Image/background_login.jpg",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\background_login.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "459110"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s4UNhQfm9TJryxjSUJvkhhrROYibnEWmGQZ5o1IAl9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 09:33:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s4UNhQfm9TJryxjSUJvkhhrROYibnEWmGQZ5o1IAl9A="
+        }
+      ]
+    },
+    {
+      "Route": "Image/background_login.njn69czty1.jpg",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\background_login.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "459110"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s4UNhQfm9TJryxjSUJvkhhrROYibnEWmGQZ5o1IAl9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 09:33:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "njn69czty1"
+        },
+        {
+          "Name": "label",
+          "Value": "Image/background_login.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s4UNhQfm9TJryxjSUJvkhhrROYibnEWmGQZ5o1IAl9A="
+        }
+      ]
+    },
+    {
+      "Route": "Image/background_signup.ilhz35ea37.jpg",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\background_signup.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "281792"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KkUk/QBOZof5l2cIvDHKwUO5bdVci3JLcnBTJH/KpIs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 09:34:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ilhz35ea37"
+        },
+        {
+          "Name": "label",
+          "Value": "Image/background_signup.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KkUk/QBOZof5l2cIvDHKwUO5bdVci3JLcnBTJH/KpIs="
+        }
+      ]
+    },
+    {
+      "Route": "Image/background_signup.jpg",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\background_signup.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "281792"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KkUk/QBOZof5l2cIvDHKwUO5bdVci3JLcnBTJH/KpIs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 09:34:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KkUk/QBOZof5l2cIvDHKwUO5bdVci3JLcnBTJH/KpIs="
+        }
+      ]
+    },
+    {
+      "Route": "Image/Login.jpg",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\Login.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54566"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AYDY8vn/p9gecUJZvxyMv4zutDLgBPk3itAH9tSED9g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 08:51:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AYDY8vn/p9gecUJZvxyMv4zutDLgBPk3itAH9tSED9g="
+        }
+      ]
+    },
+    {
+      "Route": "Image/Login.p2un0i8m6o.jpg",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\Login.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54566"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AYDY8vn/p9gecUJZvxyMv4zutDLgBPk3itAH9tSED9g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 08:51:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p2un0i8m6o"
+        },
+        {
+          "Name": "label",
+          "Value": "Image/Login.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AYDY8vn/p9gecUJZvxyMv4zutDLgBPk3itAH9tSED9g="
+        }
+      ]
+    },
+    {
+      "Route": "Image/logo-edu.png",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\logo-edu.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4976"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lOmEUt5Nm9fxEf5sOPtP/jDZ4u6MTyla+M0MYXZzTwE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 13:03:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lOmEUt5Nm9fxEf5sOPtP/jDZ4u6MTyla+M0MYXZzTwE="
+        }
+      ]
+    },
+    {
+      "Route": "Image/logo-edu.wf775kcpsj.png",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\logo-edu.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4976"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lOmEUt5Nm9fxEf5sOPtP/jDZ4u6MTyla+M0MYXZzTwE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 13:03:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wf775kcpsj"
+        },
+        {
+          "Name": "label",
+          "Value": "Image/logo-edu.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lOmEUt5Nm9fxEf5sOPtP/jDZ4u6MTyla+M0MYXZzTwE="
+        }
+      ]
+    },
+    {
+      "Route": "Image/sign up.7fvn4zutda.jpg",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\sign up.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0w7C9/a9ZsUUzA9E/cUA9ze8ngKEaRpiNCbHajm8NkQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 08:51:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7fvn4zutda"
+        },
+        {
+          "Name": "label",
+          "Value": "Image/sign up.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0w7C9/a9ZsUUzA9E/cUA9ze8ngKEaRpiNCbHajm8NkQ="
+        }
+      ]
+    },
+    {
+      "Route": "Image/sign up.jpg",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\Image\\sign up.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0w7C9/a9ZsUUzA9E/cUA9ze8ngKEaRpiNCbHajm8NkQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 08:51:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0w7C9/a9ZsUUzA9E/cUA9ze8ngKEaRpiNCbHajm8NkQ="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sPiRosgf3iULzQQXJGjakPQHX1bOBhaAMNuyVfaRc80=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 08:23:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sPiRosgf3iULzQQXJGjakPQHX1bOBhaAMNuyVfaRc80="
+        }
+      ]
+    },
+    {
+      "Route": "index.krpdtat7ql.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sPiRosgf3iULzQQXJGjakPQHX1bOBhaAMNuyVfaRc80=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 08:23:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "krpdtat7ql"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sPiRosgf3iULzQQXJGjakPQHX1bOBhaAMNuyVfaRc80="
+        }
+      ]
+    },
+    {
+      "Route": "js/login.js",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\js\\login.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EqFhgIXBA3LJ8Q4VMcp/WLR0upDkxhr1+xXmQsP7cbM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 09:15:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EqFhgIXBA3LJ8Q4VMcp/WLR0upDkxhr1+xXmQsP7cbM="
+        }
+      ]
+    },
+    {
+      "Route": "js/login.ugtznenc9d.js",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\js\\login.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EqFhgIXBA3LJ8Q4VMcp/WLR0upDkxhr1+xXmQsP7cbM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 09:15:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ugtznenc9d"
+        },
+        {
+          "Name": "label",
+          "Value": "js/login.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EqFhgIXBA3LJ8Q4VMcp/WLR0upDkxhr1+xXmQsP7cbM="
+        }
+      ]
+    },
+    {
+      "Route": "js/register.js",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\js\\register.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Re0GBtfWUwGfT0+yYz2oQ13YSXEMMDihmx8dDjgtK1c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 08:23:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Re0GBtfWUwGfT0+yYz2oQ13YSXEMMDihmx8dDjgtK1c="
+        }
+      ]
+    },
+    {
+      "Route": "js/register.vnm82bujwm.js",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\js\\register.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Re0GBtfWUwGfT0+yYz2oQ13YSXEMMDihmx8dDjgtK1c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 08:23:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vnm82bujwm"
+        },
+        {
+          "Name": "label",
+          "Value": "js/register.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Re0GBtfWUwGfT0+yYz2oQ13YSXEMMDihmx8dDjgtK1c="
+        }
+      ]
+    },
+    {
+      "Route": "login.g4qy4fjoir.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2518"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wAgh0p7L3Nt1UHPsR2l4jYPpDl2bTVoMd+4QvtIsGcg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 09:10:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g4qy4fjoir"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wAgh0p7L3Nt1UHPsR2l4jYPpDl2bTVoMd+4QvtIsGcg="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2518"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wAgh0p7L3Nt1UHPsR2l4jYPpDl2bTVoMd+4QvtIsGcg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 09:10:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wAgh0p7L3Nt1UHPsR2l4jYPpDl2bTVoMd+4QvtIsGcg="
+        }
+      ]
+    },
+    {
+      "Route": "reset-password.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\reset-password.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5475"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bYvDqh6qL3oMxPaBo/4F98vB1kh724v9a4r5M+p+DsA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 13:18:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bYvDqh6qL3oMxPaBo/4F98vB1kh724v9a4r5M+p+DsA="
+        }
+      ]
+    },
+    {
+      "Route": "reset-password.p9xodc3ves.html",
+      "AssetFile": "D:\\C#\\HETHONGHOCPHAN\\HETHONGHOCPHAN\\wwwroot\\reset-password.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5475"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bYvDqh6qL3oMxPaBo/4F98vB1kh724v9a4r5M+p+DsA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Oct 2025 13:18:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p9xodc3ves"
+        },
+        {
+          "Name": "label",
+          "Value": "reset-password.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bYvDqh6qL3oMxPaBo/4F98vB1kh724v9a4r5M+p+DsA="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Sinh Viên | Hệ Thống Học Phần</title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Sử dụng font Inter cho toàn bộ trang */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff; /* Light Blue background */
+        }
+
+        .register-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 90%;
+            margin: 2rem auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .floating-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .wave {
+            position: absolute;
+            background-color: #e0f7fa; /* Cùng tông màu xanh nhạt */
+            border-radius: 50%;
+        }
+
+        .wave-1 {
+            width: 150%;
+            height: 150%;
+            bottom: -100%;
+            left: -50%;
+            opacity: 0.6;
+        }
+
+        .wave-2 {
+            width: 180%;
+            height: 180%;
+            bottom: -120%;
+            left: -80%;
+            opacity: 0.4;
+            background-color: #b3e5fc;
+        }
+
+        .input-group label {
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+    </style>
+    <!-- Import JS file -->
+    <script type="module" src="js/register.js" defer></script>
+</head>
+<body>
+
+    <div class="floating-bg">
+        <div class="wave wave-1 transform rotate-12"></div>
+        <div class="wave wave-2 transform -rotate-12"></div>
+    </div>
+
+    <div class="register-container">
+
+        <div class="header-section">
+            <!-- Icon Mũ Tốt Nghiệp -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500 mb-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3L1 9l11 6 11-6-11-6zm0 14.2L2.4 12.5 12 7.8l9.6 4.7-9.6 4.7zm-2-8.5v3.8l2-1v-3.8l-2 1z" />
+            </svg>
+            <h1 class="text-3xl font-extrabold text-gray-800 mb-1">HỆ THỐNG HỌC PHẦN</h1>
+            <p class="text-lg text-blue-600 font-semibold">TRƯỜNG ĐẠI HỌC A</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Đăng Ký Sinh Viên</h2>
+
+        <!-- Form Đăng Ký -->
+        <form id="register-form" class="space-y-4">
+
+            <!-- MSSV -->
+            <div class="input-group">
+                <label for="StudentId">MSSV</label>
+                <input type="text" id="StudentId" name="StudentId" **title="Mã số sinh viên" ** required
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Họ & tên -->
+            <div class="input-group">
+                <label for="FullName">Họ & tên</label>
+                <input type="text" id="FullName" name="FullName" **title="Họ và tên đầy đủ" ** required
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Năm sinh -->
+            <div class="input-group">
+                <label for="DateOfBirth">Năm sinh</label>
+                <input type="date" id="DateOfBirth" name="DateOfBirth" **title="Ngày tháng năm sinh" ** required
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Giới tính -->
+            <div class="input-group">
+                <label for="Gender">Giới tính</label>
+                <select id="Gender" name="Gender" **title="Giới tính" ** required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    <option value="" disabled selected>-- Chọn --</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                </select>
+            </div>
+
+            <!-- Lớp -->
+            <div class="input-group">
+                <label for="ClassName">Lớp</label>
+                <input type="text" id="ClassName" name="ClassName" **title="Tên lớp học" ** required
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Khóa học -->
+            <div class="input-group">
+                <label for="CourseYear">Khóa học</label>
+                <input type="text" id="CourseYear" name="CourseYear" **title="Khóa học (Ví dụ: 2022)" ** placeholder="Ví dụ: 2022" required
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" name="Password" **title="Mật khẩu" ** required minlength="6"
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <!-- Email -->
+            <div class="input-group">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email" title="Địa chỉ email" required
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Message Area -->
+            <div id="response-message" class="text-center mt-4 h-6"></div>
+
+            <!-- Button -->
+            <button type="submit"
+                    class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow-md">
+                ĐĂNG KÝ
+            </button>
+
+            <p class="text-center text-sm text-gray-600 pt-2">
+                Bạn đã có tài khoản?
+                <a href="login.html" class="text-blue-500 hover:text-blue-700 font-medium">Đăng nhập ngay.</a>
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>

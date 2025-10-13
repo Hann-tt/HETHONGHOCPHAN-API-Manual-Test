@@ -1,0 +1,65 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f8ff; /* Light Blue background */
+}
+
+.register-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 90%;
+    margin: 2rem auto;
+    position: relative;
+    z-index: 10;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.floating-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.wave {
+    position: absolute;
+    background-color: #e0f7fa; /* Cùng tông màu xanh nhạt */
+    border-radius: 50%;
+}
+
+.wave-1 {
+    width: 150%;
+    height: 150%;
+    bottom: -100%;
+    left: -50%;
+    opacity: 0.6;
+}
+
+.wave-2 {
+    width: 180%;
+    height: 180%;
+    bottom: -120%;
+    left: -80%;
+    opacity: 0.4;
+    background-color: #b3e5fc;
+}
+
+.input-group label {
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 0.25rem;
+    display: block;
+}

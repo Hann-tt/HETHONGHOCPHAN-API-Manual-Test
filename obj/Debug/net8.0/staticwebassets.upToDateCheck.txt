@@ -1,0 +1,14 @@
+wwwroot\css\login.css
+wwwroot\css\register.css
+wwwroot\ForgotPassword.html
+wwwroot\home.html
+wwwroot\Image\background_login.jpg
+wwwroot\Image\background_signup.jpg
+wwwroot\Image\Login.jpg
+wwwroot\Image\logo-edu.png
+wwwroot\Image\sign up.jpg
+wwwroot\index.html
+wwwroot\js\login.js
+wwwroot\js\register.js
+wwwroot\login.html
+wwwroot\reset-password.html
